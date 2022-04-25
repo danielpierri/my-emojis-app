@@ -14,7 +14,6 @@ function renderEmojis() {
 
 renderEmojis()
 
-
 const pushBtn = document.getElementById("push-btn")
 pushBtn.addEventListener("click", () => {
   const emojiInput = document.getElementById("emoji-input")
