@@ -1,0 +1,175 @@
+html {
+  height: 100vh;
+  font-family: "Baloo", sans-serif;
+}
+
+body {
+  background-image: #ffd89b;  /* fallback for old browsers */
+  background-image: -webkit-linear-gradient(to bottom, #19547b, #ffd89b);  /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(to bottom, #19547b, #ffd89b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: no-repeat;
+  text-shadow: 5px 5px 15px #111;
+}
+
+h1,
+p {
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  text-shadow: 10px 10px 5px #111;
+}
+
+p {
+  font-size: 2.5em;
+  margin-top: 0;
+}
+
+input {
+  margin: 0 auto;
+  display: block;
+  border: none;
+  height: 40px;
+  font-size: 1.4em;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  text-align: left;
+  transition: transform 50ms ease-in;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+input:hover,
+input:focus {
+  background-color: #FFF;
+  transform: scale(1.1);
+}
+
+input:focus {
+  outline-style: outset;
+  outline-color: #303030;
+}
+
+button {
+  font-family: Baloo;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: .5em 1em;
+  border-radius: 6px;
+  margin: 0 .5em;
+}
+
+.buttons-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#emoji-container {
+  margin: 3em;
+  text-align: center;
+}
+
+#emoji-container span {
+  margin: 10px;
+  font-size: 60px;
+}
+
+#no-emoji {
+  display: none;
+}
+
+#push-btn,
+#unshift-btn {
+  background-color: #32c030;
+  margin: 2em 1em;
+  transition: transform 50ms ease-in;
+}
+
+#shift-btn,
+#pop-btn,
+#remove-all-btn {
+  background-color: #E23349;
+  margin: 0 1em;
+  transition: transform 50ms ease-in;
+}
+
+#remove-all-btn {
+  margin: 2em auto;
+  margin-bottom: 0;
+  grid-column: 1 / -1;
+}
+
+#push-btn:hover,
+#unshift-btn:hover {
+  transform: scale(1.05);
+  background-color: #14a111;
+}
+
+#shift-btn:hover,
+#pop-btn:hover,
+#remove-all-btn:hover {
+  transform: scale(1.05);
+  background-color: #ff0022;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  input {
+    margin-bottom: 1em;
+  }
+
+  #emoji-container span {
+    font-size: 40px;
+  }
+
+  .buttons-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  #push-btn,
+  #unshift-btn,
+  #shift-btn,
+  #pop-btn,
+  #remove-all-btn {
+  margin: 1em 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 5em;
+  }
+
+  p {
+    font-size: 2.5em;
+  }
+
+  button {
+    font-size: 1.125em;
+    margin: 0em;
+  }
+
+  .buttons-wrapper {
+    max-width: 600px;
+  }
+}
